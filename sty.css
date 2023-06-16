@@ -1,0 +1,50 @@
+/* start imports, vars and resets */
+@import url("https://fonts.cdnfonts.com/css/sf-ui-display");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "SF UI Display";
+}
+
+body {
+  overflow-x: hidden;
+  background: #0b0f32;
+  color: white;
+  max-width: 1500px;
+  margin: 0 150px;
+}
+
+/**
+  end imports and resets
+  start select
+***/
+.S_select {
+  display: flex;
+  justify-content: space-between;
+}
+
+.S_select-option {
+  padding: 15px 30px;
+  background: #0b0f32;
+  font-weight: 600;
+  border: solid 1px transparent;
+  border-radius: 0 0 15px 15px;
+  background-image: linear-gradient(#0b0f32, #0b0f32), radial-gradient(circle at top left, #43e97b, #38f9d7);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.S_selected {
+  background: linear-gradient(45deg, #43e97b, #38f9d7);
+  color: black;
+}
+
+.S_cards {
+  display: flex;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=sty.css.map */

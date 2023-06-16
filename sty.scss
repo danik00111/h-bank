@@ -1,0 +1,43 @@
+/* start imports, vars and resets */
+
+$main-bg: #0b0f32;
+$grad-a: #43e97b;
+$grad-b: #38f9d7;
+@mixin border-bottom-radius($a) {
+  border-radius: 0 0 $a $a;
+}
+@import url('https://fonts.cdnfonts.com/css/sf-ui-display');
+*{margin:0;padding:0;border:0;outline:0;
+  list-style:none;text-decoration:none;
+  box-sizing:border-box;font-family:'SF UI Display';}
+body{overflow-x:hidden;background:$main-bg;
+  color:white;max-width:1500px;margin:0 150px;}
+/**
+  end imports and resets
+  start select
+***/
+.S_select{
+  display: flex;
+  justify-content: space-between;
+}
+.S_select-option {
+  padding: 15px 30px;
+  background: $main-bg;
+  font-weight: 600;
+  border: solid 1px transparent;
+  @include border-bottom-radius(15px);
+  // <thanks href="https://gist.github.com/stereokai/36dc0095b9d24ce93b045e2ddc60d7a0">
+  background-image: linear-gradient($main-bg,$main-bg),
+  radial-gradient(circle at top left, $grad-a, $grad-b);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  // </thanks>
+}
+.S_selected {
+  background: linear-gradient(45deg, #43e97b, #38f9d7);
+  color: black;
+}
+.S_cards {
+  display: flex;
+  flex-wrap: wrap;
+}
