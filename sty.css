@@ -20,8 +20,8 @@ body {
 }
 
 /**
-  end imports and resets
-  start select
+  * end imports, vars and resets
+  * start select
 ***/
 .S_select {
   display: flex;
@@ -30,6 +30,7 @@ body {
 }
 
 .S_select-option {
+  font-size: 20px;
   padding: 15px 30px;
   background: #0b0f32;
   font-weight: 600;
@@ -46,8 +47,12 @@ body {
 }
 
 .S_cards {
+  margin: 0 auto;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
   flex-wrap: wrap;
+  font-weight: 500;
 }
 
 .S_card {
@@ -62,4 +67,88 @@ body {
 .S_img {
   width: 270px;
   height: 289px;
-}/*# sourceMappingURL=sty.css.map */
+}
+
+.S_wrap-one {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin: 12px 0;
+}
+
+.S_wrap-one-wrap {
+  display: flex;
+  align-items: center;
+}
+.S_wrap-one-wrap span {
+  color: #a19eac;
+  font-size: 14px;
+}
+
+.S_img-wrap {
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+}
+
+.S_pfp {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.S_pfp:not(:first-child) {
+  margin-left: -18px;
+}
+
+.S_dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #a19eac;
+}
+.S_dot:not(:first-child) {
+  margin-left: 5px;
+}
+
+.S_card-name {
+  font-size: 20px;
+  margin-bottom: 9px;
+  font-weight: 600;
+}
+
+.S_hi-bid {
+  color: #a19eac;
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+.S_wrap-two {
+  display: flex;
+  justify-content: space-between;
+}
+
+.S_bid-size {
+  color: #479889;
+}
+
+.S_likes-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fa-solid.fa-heart {
+  color: #a19eac;
+}
+
+.S_likes {
+  font-size: 12px;
+  margin-left: 4px;
+  color: #a19eac;
+}
+
+/**
+  * end select
+  * start ???
+***//*# sourceMappingURL=sty.css.map */
