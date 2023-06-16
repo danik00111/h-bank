@@ -19,25 +19,46 @@ body{overflow-x:hidden;background:$main-bg;
 .S_select{
   display: flex;
   justify-content: space-between;
+  margin-bottom: 84px;
 }
 .S_select-option {
   padding: 15px 30px;
   background: $main-bg;
   font-weight: 600;
-  border: solid 1px transparent;
   @include border-bottom-radius(15px);
   // <thanks href="https://gist.github.com/stereokai/36dc0095b9d24ce93b045e2ddc60d7a0">
-  background-image: linear-gradient($main-bg,$main-bg),
-  radial-gradient(circle at top left, $grad-a, $grad-b);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+  border: solid 1px transparent;
+  background: {
+    image: linear-gradient($main-bg, $main-bg),
+    radial-gradient(circle at top left, $grad-a, $grad-b);
+    origin: border-box;
+    clip: padding-box, border-box;
+  }
   // </thanks>
 }
 .S_selected {
-  background: linear-gradient(45deg, #43e97b, #38f9d7);
+  background: linear-gradient(45deg, $grad-a, $grad-b);
   color: black;
 }
 .S_cards {
   display: flex;
   flex-wrap: wrap;
+}
+.S_card {
+  // width: 310px;
+  // height: 471px;
+  padding: 24px 20px 20px;
+  border-radius: 6px;
+  // <thanks href="https://gist.github.com/stereokai/36dc0095b9d24ce93b045e2ddc60d7a0">
+  border: 1px solid transparent;
+  background: {
+    image: linear-gradient($main-bg, $main-bg), radial-gradient(circle at top left, $grad-a 0%, #0000 69%, #0000 100%);
+    origin: border-box;
+    clip: padding-box, border-box;
+  }
+  // </thanks>
+}
+.S_img {
+  width: 270px;
+  height: 289px;
 }
