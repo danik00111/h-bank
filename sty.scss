@@ -2,7 +2,7 @@
 $main-bg: #0b0f32;
 $grad-a: #43e97b;
 $grad-b: #38f9d7;
-$lav-gray: #a19eac;
+$lav-gray: hsl(253, 8%, 65%);
 @mixin border-bottom-radius($a) {
   border-radius: 0 0 $a $a;
 }
@@ -62,7 +62,13 @@ body{overflow-x:hidden;background:$main-bg;
   // <thanks href="https://gist.github.com/stereokai/36dc0095b9d24ce93b045e2ddc60d7a0">
   border: 1px solid transparent;
   background: {
-    image: linear-gradient($main-bg, $main-bg), radial-gradient(circle at top left, $grad-a 0%, #0000 69%, #0000 100%);
+    image: linear-gradient($main-bg, $main-bg),
+      radial-gradient(
+        circle at top left,
+        $grad-a 0%,
+        #0000 69%,
+        #0000 100%
+      );
     origin: border-box;
     clip: padding-box, border-box;
   }
@@ -126,14 +132,29 @@ body{overflow-x:hidden;background:$main-bg;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: $lav-gray;
+  transition: all 125ms ease-out;
+  &:hover {
+    color: hsl(0, 24%, 65%);
+    cursor: pointer;
+    transition: all 125ms ease-out;
+  }
+  &.active{
+    color: hsl(0, 100%, 65%);
+    transition: all 125ms ease-out;
+    &:hover {
+      color: hsl(0, 50%, 65%);
+    }
+  }
 }
 .fa-solid.fa-heart {
-  color: $lav-gray;
+  transition: all 125ms ease-out;
 }
 .S_likes {
   font-size: 12px;
   margin-left: 4px;
-  color: $lav-gray;
+  user-select: none;
+  transition: all 125ms ease-out;
 }
 /**
   * end select

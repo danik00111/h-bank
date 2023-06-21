@@ -82,7 +82,7 @@ body {
   align-items: center;
 }
 .S_wrap-one-wrap span {
-  color: #a19eac;
+  color: hsl(253, 8%, 65%);
   font-size: 14px;
 }
 
@@ -105,7 +105,7 @@ body {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #a19eac;
+  background: hsl(253, 8%, 65%);
 }
 .S_dot:not(:first-child) {
   margin-left: 5px;
@@ -118,7 +118,7 @@ body {
 }
 
 .S_hi-bid {
-  color: #a19eac;
+  color: hsl(253, 8%, 65%);
   font-size: 16px;
   margin-bottom: 7px;
 }
@@ -136,16 +136,33 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: hsl(253, 8%, 65%);
+  transition: all 125ms ease-out;
+}
+.S_likes-wrap:hover {
+  color: hsl(0, 24%, 65%);
+  cursor: pointer;
+  transition: all 125ms ease-out;
+}
+.S_likes-wrap.active {
+  color: hsl(0, 100%, 65%);
+  transition: all 125ms ease-out;
+}
+.S_likes-wrap.active:hover {
+  color: hsl(0, 50%, 65%);
 }
 
 .fa-solid.fa-heart {
-  color: #a19eac;
+  transition: all 125ms ease-out;
 }
 
 .S_likes {
   font-size: 12px;
   margin-left: 4px;
-  color: #a19eac;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: all 125ms ease-out;
 }
 
 /**
