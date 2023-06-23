@@ -7,10 +7,10 @@ likeButtonArray.forEach(button => {
     button.classList.toggle("active");
     // Determine if active or not to do the calculation
     const dir = button.classList.contains("active") ? 1 : -1;
-    // find the count holder in the buttoт
+    // find the count holder in the button
     const countElem = button.querySelector(".S_likes");
     // update the count
     const likes = +countElem.textContent + dir;
     countElem.textContent = likes;
   });
-});<span>420</span>
+});
